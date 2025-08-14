@@ -56,8 +56,10 @@ img.headshot {
 }
 
 .grid-item img {
-  width: 100%;
-  height: auto;
+  width: 150px;       /* smaller image size */
+  height: auto;       /* maintain aspect ratio */
+  display: block;     /* ensures it behaves like a block element */
+  margin: 0.5rem auto; /* centers the image horizontally */
 }
 
 .grid-item a {
