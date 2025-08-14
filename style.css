@@ -1,16 +1,17 @@
-/* style.css */
+/* style.css - Sleek black/white styling */
+
 body {
   font-family: 'Montserrat', sans-serif;
-  background-color: #f5f8fa;
-  color: #002d62;
+  background-color: #f9f9f9;
+  color: #000000;
   margin: 0;
   padding: 0;
 }
 
 header, nav {
-  background-color: #002d62;
-  padding: 1rem;
+  background-color: #000000;
   color: white;
+  padding: 1rem;
   text-align: center;
 }
 
@@ -32,8 +33,10 @@ nav a:hover {
 }
 
 img.headshot {
-  max-width: 200px;
-  border-radius: 50%;
+  max-width: 250px;
+  border-radius: 0; /* square shape */
+  display: block;
+  margin: 0 auto;
 }
 
 .grid {
@@ -46,8 +49,8 @@ img.headshot {
 .grid-item {
   width: 48%;
   background-color: white;
-  border: 1px solid #ddd;
-  border-radius: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
   overflow: hidden;
   text-align: center;
 }
@@ -61,14 +64,14 @@ img.headshot {
   display: block;
   padding: 0.5rem;
   text-decoration: none;
-  color: #007ac1;
+  color: #000;
   font-weight: bold;
 }
 
 footer {
   text-align: center;
   padding: 2rem;
-  background: #002d62;
+  background: #000000;
   color: white;
   margin-top: 4rem;
 }
