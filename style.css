@@ -1,18 +1,29 @@
-/* style.css - Sleek black/white styling */
-
-body {
-  font-family: 'Montserrat', sans-serif;
-  background-color: #f9f9f9;
-  color: #000000;
+/* --------------------------
+   Base Reset & Page Layout
+--------------------------- */
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+html, body {
+  height: 100%;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f9f9f9;
+  color: #000000;
+  display: flex;
+  flex-direction: column;
+}
+
+/* --------------------------
+   Header & Navigation
+--------------------------- */
 header, nav {
   background-color: #000000;
   color: white;
-  padding: 1rem;
   text-align: center;
+  padding: 1rem;
 }
 
 nav a {
@@ -26,40 +37,46 @@ nav a:hover {
   color: #ef3b24;
 }
 
+/* --------------------------
+   Main Content Container
+--------------------------- */
 .container {
-  max-width: 900px;
+  flex: 1; /* expands to fill space between header and footer */
+  max-width: 1200px;
+  width: 90%;
   margin: 2rem auto;
   padding: 1rem;
 }
 
-img.headshot {
-  max-width: 250px;
-  border-radius: 0; /* square shape */
-  display: block;
-  margin: 0 auto;
-}
-
+/* --------------------------
+   Responsive Grid Layout
+--------------------------- */
 .grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 1.5rem;
   justify-content: space-between;
 }
 
 .grid-item {
-  width: 48%;
+  flex: 1 1 calc(48% - 1rem);
   background-color: white;
   border: 1px solid #ccc;
   border-radius: 4px;
-  overflow: hidden;
   text-align: center;
+  padding: 1rem;
+  transition: transform 0.2s ease;
+}
+
+.grid-item:hover {
+  transform: translateY(-3px);
 }
 
 .grid-item img {
-  width: 150px;       /* smaller image size */
-  height: auto;       /* maintain aspect ratio */
-  display: block;     /* ensures it behaves like a block element */
-  margin: 0.5rem auto; /* centers the image horizontally */
+  max-width: 150px;
+  height: auto;
+  display: block;
+  margin: 0.5rem auto;
 }
 
 .grid-item a {
@@ -70,10 +87,42 @@ img.headshot {
   font-weight: bold;
 }
 
+/* --------------------------
+   Footer
+--------------------------- */
 footer {
-  text-align: center;
-  padding: 2rem;
-  background: #000000;
+  background-color: #000000;
   color: white;
-  margin-top: 4rem;
+  text-align: center;
+  padding: 2rem 1rem;
+  margin-top: auto;
+  font-size: 0.9rem;
+}
+
+/* --------------------------
+   Responsive Tweaks
+--------------------------- */
+@media (max-width: 768px) {
+  .grid-item {
+    flex: 1 1 100%;
+  }
+
+  nav a {
+    display: inline-block;
+    margin: 0.5rem 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  nav a {
+    font-size: 0.9rem;
+  }
+
+  .grid-item img {
+    max-width: 120px;
+  }
 }
