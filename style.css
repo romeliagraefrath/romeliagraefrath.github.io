@@ -26,7 +26,9 @@ img {
   display: block;
 }
 
-/* Specific Headshot Styling */
+/* --------------------------
+   Headshot Styling
+--------------------------- */
 .headshot {
   max-width: 150px;
   height: auto;
@@ -67,7 +69,25 @@ nav a:hover {
 }
 
 /* --------------------------
-   Responsive Grid Layout
+   Home Page Two-Column Layout
+--------------------------- */
+.home-intro {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.headshot-wrapper {
+  flex: 0 0 150px;
+}
+
+.bio {
+  flex: 1;
+}
+
+/* --------------------------
+   Responsive Grid Layout (Other Pages)
 --------------------------- */
 .grid {
   display: flex;
@@ -130,6 +150,16 @@ footer {
     flex: 1 1 100%;
   }
 
+  .home-intro {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .bio {
+    text-align: left;
+  }
+
   nav a {
     display: inline-block;
     margin: 0.5rem 0.75rem;
@@ -149,3 +179,4 @@ footer {
     max-width: 120px;
   }
 }
+
