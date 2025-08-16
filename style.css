@@ -24,16 +24,41 @@ img {
   max-width: 100%;
   height: auto;
   display: block;
+  object-fit: contain; /* Prevent stretching */
 }
 
 /* --------------------------
-   Headshot Styling
+   Headshot Styling (Main Page)
 --------------------------- */
 .headshot {
   max-width: 150px;
   height: auto;
   display: block;
   margin: 1rem auto;
+}
+
+/* --------------------------
+   Home Page Two-Column Layout
+--------------------------- */
+.home-intro {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+.headshot-wrapper {
+  flex: 0 0 150px;
+}
+
+.bio {
+  flex: 1;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #000;
 }
 
 /* --------------------------
@@ -58,7 +83,7 @@ nav a:hover {
 }
 
 /* --------------------------
-   Main Content Container
+   Main Content Container (Other Pages)
 --------------------------- */
 .container {
   flex: 1; /* expands to fill space between header and footer */
@@ -66,24 +91,6 @@ nav a:hover {
   width: 90%;
   margin: 2rem auto;
   padding: 1rem;
-}
-
-/* --------------------------
-   Home Page Two-Column Layout
---------------------------- */
-.home-intro {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  gap: 2rem;
-}
-
-.headshot-wrapper {
-  flex: 0 0 150px;
-}
-
-.bio {
-  flex: 1;
 }
 
 /* --------------------------
@@ -115,6 +122,7 @@ nav a:hover {
   height: auto;
   display: block;
   margin: 0.5rem auto;
+  object-fit: contain; /* prevent stretching */
 }
 
 .grid-item a {
@@ -179,4 +187,14 @@ footer {
     max-width: 120px;
   }
 }
+
+/* --------------------------
+   Responsive iframe height for Contact page
+--------------------------- */
+@media (max-width: 600px) {
+  iframe {
+    height: 400px !important;
+  }
+}
+
 
