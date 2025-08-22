@@ -1,78 +1,242 @@
-/* Contact Page Layout */
-.contact-container {
+/* Reset & Base */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #FFFFFF; /* White */
+  color: #002962; /* Cool Black */
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+}
+
+/* Header */
+header {
+  background-color: #002962; /* Cool Black */
+  color: #FFFFFF;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+/* Navigation */
+nav {
+  background-color: #007AC3; /* Ocean Boat Blue */
+  padding: 0.75rem 1rem;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover,
+nav a:focus {
+  background-color: #F1502F; /* Portland Orange */
+  outline: none;
+  color: #FFFFFF;
+}
+
+nav a[aria-current="page"] {
+  background-color: #FDBC2D; /* Ripe Mango */
+  font-weight: 700;
+  cursor: default;
+  pointer-events: none;
+  color: #002962; /* Cool Black on yellow */
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+/* Grid Layout */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
   gap: 2rem;
 }
 
-/* Contact Info Section */
-.contact-info {
+@media screen and (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Article Cards */
+.grid-item {
   background-color: #FFFFFF;
-  border: 1px solid #007AC3; /* Ocean Boat Blue border */
-  padding: 1.5rem;
+  border: 1px solid #F1502F;
   border-radius: 8px;
+  padding: 1rem;
   box-shadow: 0 2px 5px rgba(0, 42, 98, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: box-shadow 0.3s ease;
 }
 
-.contact-info h2 {
-  color: #002962; /* Cool Black */
-  font-size: 1.5rem;
-  margin-top: 0;
+.grid-item:hover,
+.grid-item:focus-within {
+  box-shadow: 0 6px 12px rgba(0, 122, 195, 0.3);
 }
 
-.contact-info p {
-  margin: 0.5rem 0;
+.grid-item > a:first-child {
+  color: #002962;
+  font-weight: 700;
+  text-decoration: none;
+  margin-bottom: 1rem;
+  display: block;
+  outline-offset: 3px;
+}
+
+.grid-item > a:first-child:hover,
+.grid-item > a:first-child:focus {
+  text-decoration: underline;
+  outline: none;
+}
+
+/* Button Link */
+.button {
+  background-color: #007AC3;
+  color: #FFFFFF;
+  text-align: center;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  user-select: none;
+  align-self: flex-start;
+}
+
+.button:hover,
+.button:focus {
+  background-color: #FDBC2D;
+  color: #002962;
+  outline: none;
+  cursor: pointer;
+}
+
+/* Home Page */
+.home-intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.headshot-wrapper {
+  max-width: 250px;
+}
+
+.headshot {
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 42, 98, 0.15);
+}
+
+.bio {
+  max-width: 700px;
+  text-align: center;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+/* Contact Page */
+.contact-info,
+.resume {
+  background-color: #FFFFFF;
+  border: 1px solid #007AC3;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0, 42, 98, 0.1);
+  margin-bottom: 2rem;
+}
+
+.contact-info p,
+.resume p {
   font-weight: 500;
+  margin: 0.75rem 0;
 }
 
-.contact-info .link {
+.contact-info a,
+.resume a {
   color: #007AC3;
   text-decoration: none;
   font-weight: 600;
 }
 
-.contact-info .link:hover,
-.contact-info .link:focus {
-  color: #F1502F; /* Portland Orange */
+.contact-info a:hover,
+.contact-info a:focus,
+.resume a:hover,
+.resume a:focus {
+  color: #F1502F;
   text-decoration: underline;
   outline: none;
 }
 
-/* Resume Section */
-.resume {
-  background-color: #FFFFFF;
-  border: 1px solid #F1502F; /* Portland Orange */
-  padding: 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 42, 98, 0.1);
-}
-
-.resume h2 {
-  color: #002962;
-  font-size: 1.5rem;
-  margin-top: 0;
-}
-
-.resume p {
-  margin-bottom: 1rem;
-  font-weight: 500;
-}
-
 .resume iframe {
-  border: 1px solid #002962; /* Cool Black border for iframe */
+  border: 1px solid #F1502F;
   border-radius: 6px;
+  margin-top: 1rem;
 }
 
-/* Responsive enhancements */
 @media screen and (min-width: 768px) {
-  .contact-container {
-    flex-direction: row;
-  }
-
-  .contact-info,
-  .resume {
-    flex: 1;
+  .resume iframe {
+    height: 700px;
   }
 }
+
+/* Footer */
+footer {
+  background-color: #002962;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  margin-top: 3rem;
+  user-select: none;
+}
+
+/* Accessibility */
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid #FDBC2D;
+  outline-offset: 3px;
+}
+
 
 
