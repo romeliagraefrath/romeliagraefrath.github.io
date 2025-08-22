@@ -14,7 +14,7 @@ html, body {
   color: #000000;
   display: flex;
   flex-direction: column;
-  overflow-x: hidden; /* Prevent horizontal scroll */
+  overflow-x: hidden;
 }
 
 /* --------------------------
@@ -24,7 +24,7 @@ img {
   max-width: 100%;
   height: auto;
   display: block;
-  object-fit: contain; /* Prevent stretching */
+  object-fit: contain;
 }
 
 /* --------------------------
@@ -64,37 +64,38 @@ img {
 /* --------------------------
    Header & Navigation
 --------------------------- */
-header, nav {
-  background-color: #000000;
-  color: white;
+header, nav, footer {
+  background-color: #002962; /* Cool Black */
+  color: #FFFFFF;
   text-align: center;
   padding: 1rem;
 }
 
 nav a {
-  color: white;
+  color: #FFFFFF;
   margin: 0 1rem;
   text-decoration: none;
   font-weight: bold;
 }
 
 nav a:hover {
-  color: #ef3b24;
+  color: #FDBC2D; /* Ripe Mango */
 }
 
 /* --------------------------
-   Main Content Container (Other Pages)
+   Main Content Container
 --------------------------- */
 .container {
-  flex: 1; /* expands to fill space between header and footer */
+  flex: 1;
   max-width: 1200px;
-  width: 90%;
+  width: 100%;
   margin: 2rem auto;
   padding: 1rem;
+  overflow-x: hidden;
 }
 
 /* --------------------------
-   Responsive Grid Layout (Other Pages)
+   Responsive Grid Layout
 --------------------------- */
 .grid {
   display: flex;
@@ -105,24 +106,26 @@ nav a:hover {
 
 .grid-item {
   flex: 1 1 calc(48% - 1rem);
-  background-color: white;
+  min-width: 0;
+  background-color: #ffffff;
   border: 1px solid #ccc;
   border-radius: 4px;
   text-align: center;
   padding: 1rem;
-  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, border-color 0.2s ease;
 }
 
 .grid-item:hover {
   transform: translateY(-3px);
+  border-color: #F1502F; /* Portland Orange */
 }
 
 .grid-item img {
+  width: 100%;
   max-width: 150px;
   height: auto;
-  display: block;
   margin: 0.5rem auto;
-  object-fit: contain; /* prevent stretching */
+  object-fit: contain;
 }
 
 .grid-item a {
@@ -131,14 +134,33 @@ nav a:hover {
   text-decoration: none;
   color: #000;
   font-weight: bold;
+  word-break: break-word;
+}
+
+/* --------------------------
+   Buttons (optional CTA)
+--------------------------- */
+.button {
+  background-color: #007AC3; /* Ocean Boat Blue */
+  color: #FFFFFF;
+  padding: 0.75rem 1.25rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+
+.button:hover {
+  background-color: #F1502F; /* Portland Orange */
 }
 
 /* --------------------------
    Footer
 --------------------------- */
 footer {
-  background-color: #000000;
-  color: white;
+  background-color: #002962; /* Cool Black */
+  color: #FFFFFF;
   text-align: center;
   padding: 2rem 1rem;
   margin-top: auto;
@@ -151,11 +173,11 @@ footer {
 @media (max-width: 768px) {
   .grid {
     flex-direction: column;
-    gap: 2rem;
   }
 
   .grid-item {
-    flex: 1 1 100%;
+    flex: none;
+    width: 100%;
   }
 
   .home-intro {
@@ -186,13 +208,18 @@ footer {
   .grid-item img {
     max-width: 120px;
   }
+
+  .grid-item {
+    padding: 1rem 0.5rem;
+  }
 }
 
 /* --------------------------
-   Responsive iframe height for Contact page
+   Responsive iframe height (Contact)
 --------------------------- */
 @media (max-width: 600px) {
   iframe {
+    width: 100%;
     height: 400px !important;
   }
 }
