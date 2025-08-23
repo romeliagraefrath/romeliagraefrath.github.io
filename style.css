@@ -39,11 +39,21 @@ header h1 {
 /* Navigation */
 nav {
   background-color: #007AC3;
-  padding: 1rem;
+  padding: 1rem 2rem;
   display: flex;
-  justify-content: center;
-  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
   flex-wrap: wrap;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-icons {
+  display: flex;
+  gap: 1rem;
 }
 
 nav a {
@@ -67,6 +77,20 @@ nav a[aria-current="page"] {
   font-weight: 700;
   pointer-events: none;
   cursor: default;
+}
+
+/* Contact SVG Icons inside nav */
+.nav-icons a svg {
+  width: 24px;
+  height: 24px;
+  fill: white;
+  transition: transform 0.3s ease, fill 0.3s ease;
+}
+
+.nav-icons a:hover svg,
+.nav-icons a:focus svg {
+  transform: scale(1.2);
+  fill: #F1502F; /* Orange on hover */
 }
 
 /* Container */
@@ -98,18 +122,6 @@ nav a[aria-current="page"] {
   transform: translateY(-4px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
 }
-
-/* Grid Item Image */
-/* Removed since all images have borders now */
-/*
-.grid-item img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 0;
-  margin-bottom: 0;
-}
-*/
 
 /* Inner content of the card */
 .grid-item-content {
@@ -236,7 +248,6 @@ button:focus-visible {
     grid-template-columns: repeat(3, 1fr);
   }
 }
-
 
 
 
