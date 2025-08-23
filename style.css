@@ -8,7 +8,7 @@
 body {
   font-family: 'Barlow', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
-  background-color: #002D62; /* Thunder navy blue */
+  background-color: #000B1A; /* Very dark navy almost black */
   color: #FFFFFF;
 }
 
@@ -23,11 +23,11 @@ img {
 
 /* Header */
 header {
-  background-color: #002962;
+  background-color: #000B1A; /* Match very dark navy */
   color: #FFFFFF;
   padding: 2rem 1rem;
   text-align: center;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
 }
 
 header h1 {
@@ -73,7 +73,7 @@ nav a:focus {
 
 nav a[aria-current="page"] {
   background-color: #F1502F;
-  color: #002962;
+  color: #000B1A;
   font-weight: 700;
   pointer-events: none;
   cursor: default;
@@ -109,18 +109,18 @@ nav a[aria-current="page"] {
 
 /* Cards (grid-item) */
 .grid-item {
-  background-color: #001940;
+  background-color: #001020; /* Slightly lighter than body but still very dark navy */
   border-radius: 12px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
 }
 
 .grid-item:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8);
 }
 
 /* Inner content of the card */
@@ -161,7 +161,7 @@ nav a[aria-current="page"] {
 .button:hover,
 .button:focus {
   background-color: #F1502F;
-  color: #002962;
+  color: #000B1A;
   cursor: pointer;
 }
 
@@ -210,7 +210,7 @@ nav a[aria-current="page"] {
 
 /* Footer */
 footer {
-  background-color: #002962;
+  background-color: #000B1A;
   color: #FFFFFF;
   text-align: center;
   padding: 1rem;
