@@ -157,14 +157,18 @@ nav a[aria-current="page"] {
 }
 
 .headshot-wrapper {
-  max-width: 240px;
-  border-radius: 50%;
+  max-width: 280px;
   overflow: hidden;
+  border-radius: 12px; /* subtle rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 42, 98, 0.15);
 }
 
 .headshot {
-  border-radius: 50%;
-  border: 3px solid #FDBC2D;
+  border-radius: 12px; /* subtle rounded corners */
+  border: 3px solid #F1502F; /* orange border */
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .bio {
