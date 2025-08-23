@@ -17,6 +17,8 @@ img {
   max-width: 100%;
   height: auto;
   display: block;
+  border: 3px solid #F1502F; /* orange border for all images */
+  border-radius: 12px; /* consistent rounded corners */
 }
 
 /* Header */
@@ -55,12 +57,12 @@ nav a {
 
 nav a:hover,
 nav a:focus {
-  background-color: #F1502F;
+  background-color: #F1502F; /* orange hover */
   color: #FFFFFF;
 }
 
 nav a[aria-current="page"] {
-  background-color: #FDBC2D;
+  background-color: #F1502F; /* changed from gold to orange */
   color: #002962;
   font-weight: 700;
   pointer-events: none;
@@ -98,6 +100,8 @@ nav a[aria-current="page"] {
 }
 
 /* Grid Item Image */
+/* Removed since all images have borders now */
+/*
 .grid-item img {
   width: 100%;
   height: auto;
@@ -105,6 +109,7 @@ nav a[aria-current="page"] {
   border-radius: 0;
   margin-bottom: 0;
 }
+*/
 
 /* Inner content of the card */
 .grid-item-content {
@@ -126,7 +131,7 @@ nav a[aria-current="page"] {
 
 .grid-item > a:first-child:hover,
 .grid-item-content > a:first-child:hover {
-  color: #FDBC2D;
+  color: #F1502F; /* changed from gold to orange */
 }
 
 /* Button */
@@ -143,7 +148,7 @@ nav a[aria-current="page"] {
 
 .button:hover,
 .button:focus {
-  background-color: #FDBC2D;
+  background-color: #F1502F; /* changed from gold to orange */
   color: #002962;
   cursor: pointer;
 }
@@ -157,18 +162,14 @@ nav a[aria-current="page"] {
 }
 
 .headshot-wrapper {
-  max-width: 280px;
+  max-width: 240px;
+  border-radius: 12px; /* rounded corners, not circle */
   overflow: hidden;
-  border-radius: 12px; /* subtle rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 42, 98, 0.15);
 }
 
 .headshot {
-  border-radius: 12px; /* subtle rounded corners */
+  border-radius: 12px;
   border: 3px solid #F1502F; /* orange border */
-  width: 100%;
-  height: auto;
-  display: block;
 }
 
 .bio {
@@ -185,12 +186,12 @@ nav a[aria-current="page"] {
 }
 
 .contact-info a {
-  color: #FDBC2D;
+  color: #F1502F; /* changed from gold to orange */
   text-decoration: underline;
 }
 
 .resume iframe {
-  border: 1px solid #F1502F;
+  border: 1px solid #F1502F; /* changed from red to orange */
   border-radius: 6px;
   margin-top: 1rem;
 }
@@ -209,7 +210,7 @@ footer {
 /* Accessibility Focus */
 a:focus-visible,
 button:focus-visible {
-  outline: 3px solid #FDBC2D;
+  outline: 3px solid #F1502F; /* changed from gold to orange */
   outline-offset: 3px;
 }
 
