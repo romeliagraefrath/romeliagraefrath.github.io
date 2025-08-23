@@ -8,7 +8,7 @@
 body {
   font-family: 'Barlow', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
-  background: linear-gradient(to bottom right, #002962, #001940); /* dark blue gradient */
+  background-color: #002D62; /* Thunder navy blue */
   color: #FFFFFF;
 }
 
@@ -17,8 +17,8 @@ img {
   max-width: 100%;
   height: auto;
   display: block;
-  border: 3px solid #F1502F; /* orange border for all images */
-  border-radius: 12px; /* consistent rounded corners */
+  border: 3px solid #F1502F;
+  border-radius: 12px;
 }
 
 /* Header */
@@ -67,12 +67,12 @@ nav a {
 
 nav a:hover,
 nav a:focus {
-  background-color: #F1502F; /* orange hover */
+  background-color: #F1502F;
   color: #FFFFFF;
 }
 
 nav a[aria-current="page"] {
-  background-color: #F1502F; /* changed from gold to orange */
+  background-color: #F1502F;
   color: #002962;
   font-weight: 700;
   pointer-events: none;
@@ -90,7 +90,7 @@ nav a[aria-current="page"] {
 .nav-icons a:hover svg,
 .nav-icons a:focus svg {
   transform: scale(1.2);
-  fill: #F1502F; /* Orange on hover */
+  fill: #F1502F;
 }
 
 /* Container */
@@ -143,7 +143,7 @@ nav a[aria-current="page"] {
 
 .grid-item > a:first-child:hover,
 .grid-item-content > a:first-child:hover {
-  color: #F1502F; /* changed from gold to orange */
+  color: #F1502F;
 }
 
 /* Button */
@@ -160,7 +160,7 @@ nav a[aria-current="page"] {
 
 .button:hover,
 .button:focus {
-  background-color: #F1502F; /* changed from gold to orange */
+  background-color: #F1502F;
   color: #002962;
   cursor: pointer;
 }
@@ -175,13 +175,13 @@ nav a[aria-current="page"] {
 
 .headshot-wrapper {
   max-width: 240px;
-  border-radius: 12px; /* rounded corners, not circle */
+  border-radius: 12px;
   overflow: hidden;
 }
 
 .headshot {
   border-radius: 12px;
-  border: 3px solid #F1502F; /* orange border */
+  border: 3px solid #F1502F;
 }
 
 .bio {
@@ -198,12 +198,12 @@ nav a[aria-current="page"] {
 }
 
 .contact-info a {
-  color: #F1502F; /* changed from gold to orange */
+  color: #F1502F;
   text-decoration: underline;
 }
 
 .resume iframe {
-  border: 1px solid #F1502F; /* changed from red to orange */
+  border: 1px solid #F1502F;
   border-radius: 6px;
   margin-top: 1rem;
 }
@@ -222,7 +222,7 @@ footer {
 /* Accessibility Focus */
 a:focus-visible,
 button:focus-visible {
-  outline: 3px solid #F1502F; /* changed from gold to orange */
+  outline: 3px solid #F1502F;
   outline-offset: 3px;
 }
 
@@ -248,6 +248,5 @@ button:focus-visible {
     grid-template-columns: repeat(3, 1fr);
   }
 }
-
 
 
